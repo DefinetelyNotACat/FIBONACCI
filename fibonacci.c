@@ -15,13 +15,18 @@ void fibonacci(long long user_number)
         b = a;
         a = c;
     }
-    printf("\i found %lld numbers", i);
+    printf("\ni found %lld numbers", i);
 
 }
-void main()
+int main()
 {
     long long number;
-    scanf("%lld", &number);
+    
+  if (scanf("%lld", &number) != 1) {
+        fprintf(stderr, "Invalid input\n");
+        return 1;
+  }
     fibonacci(number);
+    return 0;
 }
 
